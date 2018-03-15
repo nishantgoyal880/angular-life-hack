@@ -1,3 +1,14 @@
-<p>
-  search works!
-</p>
+<div class="py-5 text-black bg-secondary text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form class="form-inline justify-content-center">
+          <div class="input-group my-1">
+            <input type="text" class="form-control mr-3 my-1" placeholder="TYPE YOUR INPUT HERE"
+            id="inlineFormInputGroup" [(ngModel)]="searchedText" name="search"> </div>
+          <button type="button" class="btn btn-primary" (click)="searchApi()">SEARCH</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
