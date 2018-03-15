@@ -8,15 +8,15 @@ import { MoviesComponent } from './frame/movies/movies.component';
 import { MovieComponent } from './frame/movies/movie/movie.component';
 import { HeaderComponent } from './frame/shared/header/header.component';
 import { FooterComponent } from './frame/shared/footer/footer.component';
-import { SearchComponent } from './frame/shared/search/search.component';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MoviesearchComponent } from './frame/movies/moviesearch/moviesearch.component';
 
 
 const routes :Routes = [
-  {path: '', redirectTo:'/search',pathMatch:'full'},
+  {path: '', redirectTo:'/moviesearch',pathMatch:'full'},
   {path: 'movies', component:MoviesComponent},
-  {path: 'search', component:SearchComponent}
+  {path: 'moviesearch', component:MoviesearchComponent}
 ];
 
 
@@ -26,9 +26,9 @@ const routes :Routes = [
     AppComponent,
     MoviesComponent,
     MovieComponent,
-    SearchComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MoviesearchComponent
   ],
   imports: [
     BrowserModule,

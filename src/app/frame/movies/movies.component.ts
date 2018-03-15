@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-
+  public movies =[];
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  // Update movies list based on search text
+  setMovielist(event) {
+  	this.movies = event.moviesList;
   }
 
 }

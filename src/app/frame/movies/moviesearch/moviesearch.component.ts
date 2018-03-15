@@ -2,12 +2,12 @@ import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 import { CommonService } from '../../../services/common.service';
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
+  selector: 'app-moviesearch',
+  templateUrl: './moviesearch.component.html',
+  styleUrls: ['./moviesearch.component.css'],
   providers:[CommonService]
 })
-export class SearchComponent implements OnInit {
+export class MoviesearchComponent implements OnInit {
 
   @Output() success = new EventEmitter<any>();
 	public searchedText: string='';
@@ -19,18 +19,17 @@ export class SearchComponent implements OnInit {
   }
 
   // Function to get search text and make service call to get movies fromTMDB
-  searchApi() {
+  searchApi(){
   	this.commonService.search(this.searchedText).subscribe((res) =>{
-  	this.searchList = res.results;
-    console.log(this.searchList);
-  	this.success.emit({
+    this.searchList = res.results;
+    this.success.emit({
       'searchList': this.searchList
     });
-  	}, (error) =>{
+    }, (error) =>{
 
-  	})
+    })
+    alert(this.searchList);
   }
 
+  }
 
-
-}

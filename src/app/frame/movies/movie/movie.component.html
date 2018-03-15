@@ -1,3 +1,6 @@
-<p>
-  movie works!
-</p>
+<h1> Search results</h1>
+<div *ngFor="let movie of movies">
+	<h2> Movie Id : {{movie.id}}</h2>
+	<h2> Movie Title : {{movie.title}}</h2>
+</div>
+<!-- <<button type="button" (click)="addMovie(movie)">Add to Favourite</button> -->
