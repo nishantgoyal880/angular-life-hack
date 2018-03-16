@@ -28,8 +28,6 @@ export class MoviesearchComponent implements OnInit {
     }, (error) =>{
 
     })
-    alert(this.searchList);
   }
 
   }
-
