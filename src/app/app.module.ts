@@ -12,12 +12,15 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MoviesearchComponent } from './frame/movies/moviesearch/moviesearch.component';
 import { MoviesingleComponent } from './frame/movies/movie/moviesingle/moviesingle.component';
+import { MovFavComponent } from './frame/mov-fav/mov-fav.component';
+import { MovFavViewComponent } from './frame/mov-fav/mov-fav-view/mov-fav-view.component';
 
 
 const routes :Routes = [
-  {path: '', redirectTo:'/movies',pathMatch:'full'},
+  {path: '', redirectTo:'/moviesearch',pathMatch:'full'},
   {path: 'movies', component:MoviesComponent},
-  {path: 'moviesearch', component:MoviesearchComponent}
+  {path: 'moviesearch', component:MoviesearchComponent},
+  {path: 'mov-fav',component:MovFavComponent}
 ];
 
 
@@ -30,7 +33,9 @@ const routes :Routes = [
     HeaderComponent,
     FooterComponent,
     MoviesearchComponent,
-    MoviesingleComponent
+    MoviesingleComponent,
+    MovFavComponent,
+    MovFavViewComponent
   ],
   imports: [
     BrowserModule,

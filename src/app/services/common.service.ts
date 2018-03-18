@@ -24,4 +24,31 @@ export class CommonService {
      return Observable.throw(error.statusText);
    }
 
+
+  //Add Movie In Favourite
+   addMovie(movie) {
+    return this.http.post(App.apiUrl+"movies", movie, {headers: this.headers})
+     .map(data => data.json(),
+   (error: any)=>this.handleError(error));
+  }
+
+  //Show List of Favourites
+   showFav() {
+    return this.http.get(App.apiUrl+"db")
+     .map(data => data.json(),
+   (error: any)=>this.handleError(error));
+   } 
+
+   //Delete List Of Favourites
+   deleteMovie(movie) {
+      return this.http.delete(App.apiUrl+"movies/"+movie.id, { headers: this.headers })
+      .map(data => data.json(),
+    (error: any)=>this.handleError(error));
+}
+
+
+
+
+
+
 }

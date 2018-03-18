@@ -6,7 +6,9 @@
           <div class="input-group my-1">
             <input type="text" class="form-control mr-3 my-1" placeholder="TYPE YOUR INPUT HERE"
             id="inlineFormInputGroup" [(ngModel)]="searchedText" name="search"> </div>
-          <button type="button" class="btn btn-primary" (click)="searchApi()">SEARCH</button>
+          <button type="button" class="btn btn-primary mr-3" (click)="searchApi()">SEARCH</button>
+          <button type="button" class="btn btn-primary">
+            <a routerLink="/mov-fav">Watch Fav</a></button>
         </form>
       </div>
     </div>
